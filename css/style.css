@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Raleway&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    
+    
+}
+
+:root {
+    --body-bg-color: white;
+    --side-bar-bg-color: #e6e8ec63;
+    --main-font-color: #6956E5;
+  }
+
+html, body{
+    width: 100%;
+    height: 100%;
+    background-color: var(--body-bg-color); 
+    /* font-family: "Be Vietnam Pro" , sans-serif; */
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'gilroy', sans-serif;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+#search_logo{
+   
+    color: var(--main-font-color);
+    margin: 7px;
+    font-size: 1.8rem;
+}
+
+
+#main{
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 5fr;
+}
+
+/* side bar Upper */
+
+
+
+
+#side_bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 235px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    background-color: var(--side-bar-bg-color);
+    background-color: var(--side-bar-bg-color);
+    border-bottom-right-radius: 16px;
+    border-top-right-radius: 16px;
+    padding: 12px 0px 10px 10px;
+    box-shadow: 0 6px 32px 1px rgba(168, 168, 168, 0.425);
+}
+
+#bus_logo{
+    display: flex;
+    /* text-shadow: 0 11px 8.896px #8e8d8ac9,0 -2px 1px #fff; */
+    align-items: center;
+}
+
+#bus_logo span{
+    color: var(--main-font-color);
+
+    font-size: 2rem;
+}
+
+#bus_logo h4{
+    color: var(--main-font-color);
+    margin: 7px;
+    font-size: 1.5rem;
+}
+
+
+#side_bar_links{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* border: 2px solid yellow; */
+
+}
+
+
+#side_bar_upper {
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid red; */
+    gap: 35px;
+    padding: 14px;
+}
+
+#side_bar_upper a button {
+    font-size: 15px;
+}
+
+
+#side_bar_btn_border{
+    justify-self: center;
+    width: 90%;
+    background-color: #C4C4C4;
+    height: 1px;
+}
+
+
+
+.side_bar_upper_btn{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color:transparent;
+    border: none;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #878787;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.purple_color{
+    color: var(--main-font-color);
+    text-shadow: 0 11px 8.896px #8e8d8ac9,0 -2px 1px #fff;
+}
+
+#side_bar_lower {
+    width: 80%;
+    height: 120px;
+    background-color: #7e6ee71d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 0px;
+    border-radius: 15px ;
+    margin: 15px;
+    padding: 15px;
+    position: relative;
+    box-shadow: 0 15px 44px 1px rgba(193, 164, 248, 0.589);
+
+}
+
+#logo_side_bar {
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 100%;
+
+}
+
+#side_bar_lower #logo_side_bar img{
+    width: 100px;
+    position: absolute;
+    top: -40%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    opacity: 0.8;;
+}
+
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #6956E5;
+    box-shadow: inset 0 0 6px #6956E5;
+    ;
+    border-radius: 22px;
+    max-height: 10%;
+    height: 10%;
+}
+
+.section::-webkit-scrollbar-track {
+    background-color: darkgrey;
+    max-height: 10%;
+    height: 10%;
+  }
+
+  .achor_tag{
+    text-decoration: none;
+  }
+
+
+
+
+ /* Main Algo */
+
+#main_algo{
+    position: relative;
+    top:0;
+    left: 235px;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100vw - 235px);
+    padding: 0% 8%;
+    color: rgba(0, 0, 0, 0.71);
+}
+
+#main_algo_heading{
+    margin-top: 15px;
+    color: var(--main-font-color);
+}
+
+#main_algo_content{
+    /* padding: 8%; */
+    margin-top: 4%;
+    font-weight: 500;
+    font-size: 18px;
+
+}
+
+.heading4{
+    font-size: 1.2rem;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    
+}
+.heading4 span{
+    font-weight: bold;
+}
+.arrow{
+    display: flex;
+    align-items: center;
+}
+
+
+.padding-para{
+    padding-left: 8px ;
+}
+
+
+
+
+#next_page_btn{
+
+   
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    /* border: 2px solid red; */
+    width: calc(100vw - 235px);
+
+}

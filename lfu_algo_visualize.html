@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/buttonanimation.css">
+    <link rel="stylesheet" href="./css/lfu_algo_visualize.css">
+    <link rel="stylesheet" href="./css/range_slider.css">
+    <link rel="stylesheet" href="./css/input.css">
+    <link rel="stylesheet" href="./css/toast.css">
+
+    <title>Cache Memory</title>
+</head>
+
+<body>
+    <div id="main">
+        <div id="side_bar">
+
+            <div id="bus_logo">
+                <span id="all_match_icon" class="material-symbols-outlined">
+                    all_match
+                </span>
+                <h4>Visualzzz</h4>
+            </div>
+            <div id="side_bar_links">
+
+
+                <div id="side_bar_upper">
+                    <a href="./index.html" class="achor_tag"><button class="side_bar_upper_btn">
+                            <span class="material-symbols-outlined">
+                                token
+                            </span>
+                            &nbsp;
+                            Algorithms
+                        </button></a>
+                    <a href="./lfu_algo.html" class="achor_tag">
+                        <button class=" purple_color side_bar_upper_btn">
+                            <span class="material-symbols-outlined">
+                                double_arrow
+                            </span>
+                            &nbsp;
+                            LFU
+                        </button>
+                    </a>
+                    <a href="./lfu_algo.html" class=" achor_tag">
+
+                        <button class=" side_bar_upper_btn">
+                            <span class="material-symbols-outlined">
+                                double_arrow
+                            </span>
+                            &nbsp;
+                            LRU
+                        </button>
+                    </a>
+
+                    <a href="./lfu_algo.html" class="achor_tag">
+
+                        <button class="side_bar_upper_btn">
+                            <span class="material-symbols-outlined">
+                                double_arrow
+                            </span>
+                            &nbsp;
+                            LIFO
+                        </button>
+                    </a>
+                    <div id="side_bar_btn_border"></div>
+                </div>
+
+                <div id="side_bar_lower" class="animated_btn">
+                    <div id="logo_side_bar">
+                        <img src="./images/thoughts1.png" alt="">
+                    </div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe0opmF874PWgLBLzZFy-mb9GPv7tHczH4QdO82npxpL086wQ/viewform?usp=sf_link"
+                        target="_blank">
+                        <span>Suggestions</span>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div id="lfu_visual_main">
+
+            <h3 id="lfu_heading">LFU Visualizer</h3>
+
+            <div id="cards">
+                <div id="first_card_main" class="cards_flex2">
+
+                    <div id="first_card" class="cards_flex">
+                        <h4 class="cards_heading">Capacity</h4>
+                        <div id="range_slider">
+                            <div class="value">0</div>
+                            <input type="range" min="0" max="10" step="1" value="0">
+
+                        </div>
+
+
+
+                    </div>
+                    <button class="btn" id="set_range">
+                        Set
+                    </button>
+                </div>
+
+
+                <div id="second_card_main" class="cards_flex2">
+
+                    <div id="second_card" class="cards_flex">
+                        <h4 class="cards_heading">Put</h4>
+
+                        <div class="container">
+                            <form>
+                                <div class="group">
+                                    <input type="number" required id="key_input">
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label>Key</label>
+                                </div>
+
+                                <div class="group">
+                                    <input type="number" required id="value_input">
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label>Value</label>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                    <button class="btn" id="put_btn">
+                        Put
+                    </button>
+
+                </div>
+
+
+                <div id="third_card_main" class="cards_flex2">
+
+                    <div id="third_card" class="cards_flex">
+                        <h4 class="cards_heading">Get</h4>
+
+                        <div class="container">
+                            <form>
+                                <div class="group">
+                                    <input type="number" required id="find_key_input">
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label>Key</label>
+                                </div>
+
+                            </form>
+                        </div>
+
+                    </div>
+                    <button class="btn" id="get_btn">
+                        Get
+                    </button>
+
+                </div>
+            </div>
+            <div>
+
+            </div>
+
+            <div class="toast">
+                <div class="toast-content">
+                    <i class="fas fa-solid fa-check check"></i>
+
+                    <div class="message">
+                        <span class="text text-2" id="direction_msg">Your changes has been saved</span>
+                    </div>
+                </div>
+                <i class="fa-solid fa-xmark close"></i>
+
+                <div class="progress"></div>
+            </div>
+
+
+            <div id="visualize_lfu">
+
+                <div id="direction">
+
+                </div>
+                <div id="hashmap_visual_main">
+
+                    <h1 class="headings">Hash-Map</h1>
+                    <div id="hashmap">
+
+                    </div>
+                </div>
+
+                <div id="linklist_visual_main">
+
+                    <h1 class="headings">Frequency Linked List</h1>
+                    <div id="linklist">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    <script src="./js/toast.js">
+    </script>
+
+    <script type="text/javascript" src="./js/main_lfu_algo.js">
+
+
+        
+
+    </script>
+
+</body>
+
+</html>

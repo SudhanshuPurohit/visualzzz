@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/buttonanimation.css">
+
+    <title>Cache Memory</title>
+</head>
+
+<body>
+    <div id="main">
+        <div id="side_bar">
+
+            <div id="bus_logo">
+                <span id="all_match_icon" class="material-symbols-outlined">
+                    all_match
+                </span>
+                <h4>Visualzzz</h4>
+            </div>
+            <div id="side_bar_links">
+
+
+                <div id="side_bar_upper">
+            <a href="./index.html" class="achor_tag"><button class="side_bar_upper_btn">
+                        <span class="material-symbols-outlined">
+                            token
+                        </span>
+                        &nbsp;
+                        Algorithms
+                    </button></a>
+                    <a href="./lfu_algo.html" class="achor_tag">
+                    <button class=" purple_color side_bar_upper_btn">
+                        <span class="material-symbols-outlined">
+                            double_arrow
+                        </span>
+                        &nbsp;
+                        LFU
+                    </button>
+                </a>
+                <a href="./lfu_algo.html" class=" achor_tag">
+
+                    <button class=" side_bar_upper_btn">
+                        <span class="material-symbols-outlined">
+                            double_arrow
+                        </span>
+                        &nbsp;
+                        LRU
+                    </button>
+                </a>
+
+                    <a href="./lfu_algo.html" class="achor_tag">
+
+                    <button class="side_bar_upper_btn">
+                        <span class="material-symbols-outlined">
+                            double_arrow
+                        </span>
+                        &nbsp;
+                        LIFO
+                    </button>
+                    </a>
+                    <div id="side_bar_btn_border"></div>
+                </div>
+
+                <div id="side_bar_lower" class="animated_btn">
+                    <div id="logo_side_bar">
+                        <img src="./images/thoughts1.png" alt="">
+                    </div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe0opmF874PWgLBLzZFy-mb9GPv7tHczH4QdO82npxpL086wQ/viewform?usp=sf_link" target="_blank">
+                        <span> Suggestions</span>
+                    </a>
+
+                </div>
+            </div>
+
+            
+            
+        </div>
+
+
+        <div id="main_algo">
+            <h1 id="main_algo_heading">LFU (Least Frequently Used)</h1>
+            <div id="main_algo_content">
+                <p style="text-align: center;"><i><b>"The LFU cache is a clever algorithm for managing cache memory
+                            efficiently" </b></i> </p>
+                <br>
+                <p>
+                    Least Frequently Used (LFU) is a caching algorithm in which the least frequently used cache block is
+                    removed whenever the cache is overflowed. In LFU we check the old page as well as the frequency of
+                    that page and if the frequency of the page is larger than the old page we cannot remove it and if
+                    all the old pages are having same frequency then take last i.e FIFO method for that and remove that
+                    page.
+
+                </p>
+
+                <h4 class="heading4">
+                    <span class="material-symbols-outlined">
+                        keyboard_double_arrow_right
+                    </span>
+                    Data Structures:
+                </h4>
+                <p class="padding-para">
+                    Your implementation uses two main data structures: a linked list to store the cache items ordered by
+                    their frequency of use, and a hashmap to provide quick access to cache items using their keys.
+                </p>
+                <h4 class="heading4">
+                    <span class="material-symbols-outlined">
+                        keyboard_double_arrow_right
+                    </span>
+                    Functionality:
+                </h4>
+                <p class="padding-para">
+                    Users can interact with your visualization by setting the capacity of the cache memory, adding
+                    key-value pairs, and retrieving values associated with specific keys.
+                </p>
+                <h4 class="heading4">
+                    <span class="material-symbols-outlined">
+                        keyboard_double_arrow_right
+                    </span>
+                    Use Counter:
+                </h4>
+                <p class="padding-para">
+
+                    Each cache item (key-value pair) has an associated use counter. The use counter is initialized to 1
+                    when a new item is inserted into the cache. The use counter is incremented every time a get or put
+                    operation is performed on the item.
+                </p>
+                <h4 class="heading4">
+                    <span class="material-symbols-outlined">
+                        keyboard_double_arrow_right
+                    </span>
+                    Least Frequently Used Key:
+                </h4>
+                <p class="padding-para">
+
+                    The core idea of the LFU algorithm is to identify and remove the least frequently used item from the
+                    cache when it reaches its capacity. The item with the smallest use counter is considered the least
+                    frequently used key.
+
+                </p>
+                <h4 class="heading4">
+                    <span class="material-symbols-outlined">
+                        keyboard_double_arrow_right
+                    </span>
+                    Time Complexity:
+                </h4>
+                <p class="padding-para">
+                    One of the main advantages of the LFU cache algorithm is its constant time complexity (O(1)) for
+                    basic operations like get and put. This is achieved by efficiently managing the cache items using
+                    the linked list and hashmap data structures.
+                </p>
+                <h4 class="heading4">
+                    <span class="material-symbols-outlined">
+                        keyboard_double_arrow_right
+                    </span>
+
+                    Efficiency:
+                </h4>
+                <p class="padding-para">
+                    LFU is especially effective in scenarios where certain items are accessed frequently while others
+                    are accessed infrequently. By evicting the least frequently used items, the cache optimally manages
+                    its space to store more relevant data.
+                </p>
+                <h4 class="heading4">
+                    <span class="material-symbols-outlined">
+                        keyboard_double_arrow_right
+                    </span>
+
+                    Eviction Strategy:
+
+                </h4>
+                <p class="padding-para">
+                    When the cache is full and a new item needs to be inserted, the LFU algorithm removes the item with
+                    the smallest use counter. This eviction strategy ensures that the cache retains the most frequently
+                    and recently used items.
+                </p>
+
+                <h4 class="heading4">
+                    <span class="material-symbols-outlined">
+                        keyboard_double_arrow_right
+                    </span>
+
+                    Adaptiveness:
+                </h4>
+                <p class="padding-para">
+                    The LFU cache adapts well to changing usage patterns over time. If an item that was initially
+                    accessed infrequently becomes more popular, its use counter will increase, preventing it from being
+                    evicted prematurely.
+                </p>
+                <h4 class="heading4">
+                    <span class="material-symbols-outlined">
+                        keyboard_double_arrow_right
+                    </span>
+
+                    Visual Representation:
+                </h4>
+                <p class="padding-para">
+
+                    The visual aspect of your website is an excellent way to help users understand how the LFU algorithm
+                    works. Visualizations can make complex concepts more accessible and engaging.
+                </p>
+
+            </div>
+            <div id="next_page_btn">
+
+                <button id="read_more" class="animated_btn" style="border: none;">
+                    <a href="https://en.wikipedia.org/wiki/Least_frequently_used" target="_blank">
+                        <span> Read More</span>
+                    </a>
+                </button>
+                <button id="read_more" class="animated_btn" style="border: none;">
+                    <a href="./lfu_algo_visualize.html">
+                        <span>Visualize</span>
+                    </a>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
